@@ -1,24 +1,84 @@
-<ul>
-    <div>
-        <img class="ftt" src="../assets/img/ftt.png" alt="Logo FTT" height:auto>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header"
+    style="position: fixed;z-index: 1;top: 0;left: 0;">
+    <div class="drawer mdl-layout__drawer" style="transform: translateX(0);">
+        <img src="../assets/img/ftt.png" class="img-center" style="width: 90%" />
+
+        <nav class="navigation mdl-navigation mdl-color--blue-grey-800">
+            <a class="mdl-navigation__link" routerLink="/home">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    home
+                </i>
+                Home
+            </a>
+            <a class="mdl-navigation__link" href="/dialog">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    auto_awesome_motion
+                </i>
+                Dialog
+            </a>
+            <a class="mdl-navigation__link" href="/toaster">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    notification_important
+                </i>
+                Toaster
+            </a>
+            <a class="mdl-navigation__link" href="/select">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    list
+                </i>
+                Select
+            </a>
+            <a class="mdl-navigation__link" href="/input">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    mode_edit
+                </i>
+                Input
+            </a>
+            <a class="mdl-navigation__link" href="/button">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    arrow_circle_right
+                </i>
+                Button
+            </a>
+            <a class="mdl-navigation__link" href="/home">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    link
+                </i>
+                Link
+            </a>
+            <a class="mdl-navigation__link" href="/home">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    double_arrow
+                </i>
+                Divider
+            </a>
+            <a class="mdl-navigation__link" href="/post/index">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    wysiwyg
+                </i>
+                Crud
+            </a>
+            <a class="mdl-navigation__link" href="https://github.com/luizgustavo77/FTTBlazor" target="_blank">
+                <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">
+                    code
+                </i>
+                GitHub
+            </a>
+        </nav>
     </div>
-    <li class="menu"><a routerLink="/home" class="bi bi-house-door-fill"> Home</a></li>
-    <li class="menu"><a routerLink="/dialog" class="bi bi-bell-fill"> Dialog</a></li>
-    <li class="menu"><a routerLink="/toaster" class="bi bi-list-ul"> Toaster</a></li>
-    <li class="menu"><a routerLink="/select" class="bi bi-card-heading"> Select</a></li>
-    <li class="menu"><a routerLink="/input" class="bi bi-pencil-fill"> Input</a></li>
-    <li class="menu"><a routerLink="/button" class="bi bi-pencil-fill"> Button</a></li>
-    <li class="menu"><a routerLink="/post/index" class="bi bi-pencil-fill"> CRUD</a></li>
-    <li class="menu"><a href="https://github.com/luizgustavo77/FTTAngular" target="_blank" class="bi bi-code">
-            GitHub</a></li>
-</ul>
 
-<div style="margin-left:25%;padding:1px 16px;height:1000px;">
-    <div class="titulo">
-        <img class="logo" src="../assets/img/angular.png" alt="texto" width="100">
-        <h1 class="">FTT Angular</h1>
-    </div>
+    <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid">
+            <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid"
+                style="margin-top: -8px;height: 20rem;">
+                <img style="width: 95%;height: 19rem;" src="../assets/img/logoMicrosoft2.png" />
+            </div>
+            <router-outlet></router-outlet>
 
-    <router-outlet></router-outlet>
-
+        </div>
+    </main>
 </div>

@@ -1,20 +1,53 @@
-<h1>Toaster</h1>
-<br>
-<h2>Exemplo</h2>
-<p class="texto">Clicando nos botões abaixo a notificação vai abrir, irá sobrepor tudo atrás da página.</p>
-<div class="container">
-    <div class="row">
-        <button (click)="showToasterSuccess()" class="btn btn-success">
-            Success Toaster
-        </button>
-        <button (click)="showToasterError()" class="btn btn-danger">
-            Error Toaster
-        </button>
+<div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+    <div class="mdl-cell--12-col">
+        <h1>Toaster</h1>
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Exemplo</h4>
+        <h6>Clicando nos botões abaixo a notifição vai abrir, ira sobrepor tudo atras da pagina.</h6>
+    </div>
+
+    <div class="mdl-cell--3-col mdl-grid">
         <button (click)="showToasterInfo()" class="btn btn-info">
             Info Toaster
         </button>
+    </div>
+
+    <div class="mdl-cell--3-col mdl-grid">
+        <button (click)="showToasterSuccess()" class="btn btn-success">
+            Success Toaster
+        </button>
+    </div>
+    <div class="mdl-cell--3-col mdl-grid">
         <button (click)="showToasterWarning()" class="btn btn-warning">
             Warning Toaster
         </button>
+    </div>
+    <div class="mdl-cell--3-col mdl-grid">
+        <button (click)="showToasterError()" class="btn btn-danger">
+            Error Toaster
+        </button>
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Usando</h4>
+        <h6>Injeção no statup</h6>
+        <img src="../../../assets/img/about/toasterUse1.png" />
+        <h6>Injeção na pagina</h6>
+        <img src="../../../assets/img/about/toasterUse2.png" />
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Codigo usado</h4>
+        <h6>Abaixo uma imagem de como implementar o dialog no seu sistema</h6>
+        <img src="../../../assets/img/about/toaster.png" />
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Parametros do <span style="font-weight:bold;">ShowToast</span></h4>
+        <h6><span style="font-weight:bold;">Message:</span> Aqui passamos o texto que sera mostrado ao aparecer o toaster</h6>
+
+        <h6><span style="font-weight:bold;">ToastEnum:</span> Aqui passamos o tipo da notificação</h6>
     </div>
 </div>

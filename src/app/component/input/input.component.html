@@ -1,75 +1,82 @@
-<h1>Input</h1>
-<br>
-<h2>Exemplo</h2>
-<p class="texto">Abaixo uma série de inputs.</p>
-<div class="container">
-    <!--1 Linha-->
-    <div class="row">
-        <div class="col-sm">
-            TEXTO
-            <input type="text" class="form-control" id="text">
-        </div>
-        <div class="col-sm">
-            CHECKBOX
-            <div class="checkbox">
-                <label><input type="checkbox" value=""> Checkbox</label>
-            </div>
-        </div>
-        <div class="col-sm">
-            COLOR
-            <br>
-            <input type="color" id="favcolor" name="favcolor" value=""><br><br>
-        </div>
+<div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+    <div class="mdl-cell--12-col">
+        <h1>Input (string)</h1>
     </div>
-    <!--2 Linha-->
-    <div class="row">
-        <div class="col-sm">
-            <div class="form-group">
-                <label for="comment">TEXT AREA </label>
-                <textarea class="form-control" rows="5" id="textarea"></textarea>
-            </div>
-        </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Exemplo</h4>
+        <h6>Abaixo uma serie de opções para INPUT e exemplos de como usar.</h6>
     </div>
-    <!--3 Linha-->
-    <div class="row">
-        <div class="col-sm">
-            HOUR
-            <br>
-            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
-        </div>
-        <div class="col-sm">
-            PHONE
-            <br>
-            <div class="input-group mb-3">
-                <input type="number" class="form-control" placeholder="(00) 00000-0000">
+    <div class="container">
+        <!--1 Linha-->
+        <div class="row">
+            <div class="col-sm">
+                TEXTO
+                <input type="text" class="form-control" id="text">
+            </div>
+            <div class="col-sm">
+                CHECKBOX
+                <div class="checkbox">
+                    <label><input type="checkbox" value=""> Checkbox</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                COLOR
+                <br>
+                <input type="color" id="favcolor" name="favcolor" value=""><br><br>
             </div>
         </div>
-        <div class="col-sm">
-            NUMBERS
-            <br>
-            <input type="number" id="quantity" name="quantity" min="1" max="5">
-        </div>
-    </div>
-    <!--4 Linha-->
-    <div class="row">
-        <div class="col-sm">
-            MONEY
-            <br>
-            <div class="form-row">
-                <input type="number" value="" placeholder="0,00" min="0" step="0.10" data-number-to-fixed="2"
-                    data-number-stepfactor="100" class="currency" id="c1" />
+        <!--2 Linha-->
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="comment">TEXT AREA </label>
+                    <textarea class="form-control" rows="5" id="textarea"></textarea>
+                </div>
             </div>
         </div>
-        <div class="col-sm">
-            EMAIL
-            <div class="form-group">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <!--3 Linha-->
+        <div class="row">
+            <div class="col-sm">
+                HOUR
+                <br>
+                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+            </div>
+            <div class="col-sm">
+                PHONE
+                <br>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" placeholder="(00) 00000-0000">
+                </div>
+            </div>
+            <div class="col-sm">
+                NUMBERS
+                <br>
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
             </div>
         </div>
-        <div class="col-sm">
-            DATE
-            <br>
-            <input id="date" type="date">
+        <!--4 Linha-->
+        <div class="row">
+            <div class="col-sm">
+                MONEY
+                <br>
+                <div class="form-row">
+                    <input type="number" value="" placeholder="0,00" min="0" step="0.10" data-number-to-fixed="2"
+                        data-number-stepfactor="100" class="currency" id="c1" />
+                </div>
+            </div>
+            <div class="col-sm">
+                EMAIL
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+            </div>
+            <div class="col-sm">
+                DATE
+                <br>
+                <input id="date" type="date">
+            </div>
         </div>
     </div>
 </div>

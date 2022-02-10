@@ -1,10 +1,71 @@
-<h1>Dialog</h1>
-<br>
-<h2>Exemplo</h2>
-<p class="texto">Clicando no botão abaixo o dialog vai abrir, por sobrepõe tudo atrás da página. Clicando
-  fora o
-  dialog vai ser fechado.</p>
-<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Abrir dialog</button>
+<style>
+  body {
+    background: #f06d06;
+    font-size: 80%;
+  }
+
+  main {
+    background: white;
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  main div {
+    background: black;
+    color: white;
+    padding: 15px;
+    max-width: 125px;
+    margin: 5px;
+  }
+
+  .inline-block-center {
+    text-align: center;
+  }
+
+  .inline-block-center div {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+
+
+<div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+  <div class="mdl-cell--12-col">
+    <h1>Dialog</h1>
+  </div>
+
+  I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my
+  siblings do.
+
+  <div class="mdl-cell--12-col">
+    <h4>Exemplo</h4>
+    <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Abrir dialog</button>
+  </div>
+  <div class="mdl-cell--12-col">
+    <h4>Usando</h4>
+    <h6>Variavel booleana que quando <b>true</b> abre o dialog e quando <b>false</b> fecha o modal</h6>
+    <img src="../../../assets/img/about/dialogUse.png" />
+  </div>
+
+  <div class="mdl-cell--12-col">
+    <h4>Codigo usado</h4>
+    <h6>Abaixo uma imagem de como implementar o dialog no seu sistema</h6>
+    <img src="../../../assets/img/about/dialog.png" />
+  </div>
+
+  <div class="mdl-cell--12-col">
+    <h4>Parametro <span style="font-weight:bold;">bind-IsOpen</span></h4>
+    <h6>Aqui criamos a variavel que passamos como parametro para abrir o dialog</h6>
+    <img src="../../../assets/img/about/dialogCode.png" />
+  </div>
+</div>
+
 <ng-template #mymodal let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Modal Title.</h4>

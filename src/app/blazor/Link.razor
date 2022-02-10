@@ -1,0 +1,55 @@
+﻿@page "/link"
+
+@using FTTBlazor.Components.Forms.Link;
+
+@code{
+    FTTBlazor.Common.PokeAPI.PokemonDTO pokemon = new FTTBlazor.Common.PokeAPI.PokemonDTO()
+    {
+        Id = new Guid().ToString(),
+        Name = "Squardle"
+    };
+
+}
+
+<div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+    <div class="mdl-cell--12-col">
+        <h1>Link</h1>
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Exemplo</h4>
+        <h6>Abaixo uma serie de opções para LINK e exemplos de como usar.</h6>
+    </div>
+
+    <FTTLink BorderRight="true" Size="4" T="FTTBlazor.Common.PokeAPI.PokemonDTO" Icon="visibility"
+             Title="Link para pokemon" LabelLink="@pokemon.Name">
+        <Body>
+            <FTTBlazor.Models.LinkPage Item="pokemon"></FTTBlazor.Models.LinkPage>
+        </Body>
+        <Footer>
+        </Footer>
+    </FTTLink>
+
+    <div class="mdl-cell--12-col">
+        <h4>Usando</h4>
+        <h6>Adicionando na pagina</h6>
+        <img src="../img/about/link1.png" />
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Codigo usado</h4>
+        <h6>Abaixo uma imagem de como implementar o componente no seu sistema</h6>
+        <img src="../img/about/link.png" />
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Parametros do <span style="font-weight:bold;">FTTLink</span></h4>
+        <h6><span style="font-weight:bold;">Body:</span> Aqui podemos adicionar o conteudo do corpo do MODAL</h6>
+        <h6><span style="font-weight:bold;">RenderFragment:</span> Aqui podemos adicionar o conteudo do footer do MODAL</h6>
+        <h6><span style="font-weight:bold;">Title:</span> Aqui definimos o titulo do MODAL e o LABEL do LINK</h6>
+        <h6><span style="font-weight:bold;">LabelLink:</span> Aqui definimos o nome do LINK</h6>
+        <h6><span style="font-weight:bold;">Size:</span> Tamanho do componente na tela</h6>
+        <h6><span style="font-weight:bold;">Icon:</span> Icone do LINK</h6>
+    </div>
+
+</div>

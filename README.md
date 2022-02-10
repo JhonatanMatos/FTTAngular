@@ -25,3 +25,42 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+---
+
+## ☕ **FTTAngular Beta**
+> Roadmap do desenvolvimento
+
+| Componente | Relação | Entrega | Concluido | Responsavel |
+| --- | --- | --- | --- | --- |
+| Dialog | Dialog | Set/2021 | OK | Jhow |
+| Toast | Dialog | Set/2021 | OK | Jhow |
+| Grid Divider | Dialog/2021 | Out | OK | Jhow |
+| Input | Forms | Set/2021 | OK | Jhow |
+| Select Type T  | Forms | Set/2021 | OK | Jhow |
+| Select Enum  | Forms | Set/2021 | OK | Jhow |
+| Select Array  | Forms | Set/2021 | OK | Jhow |
+| Number | Forms | Out/2021 | OK | Jhow |
+| Color | Forms | Out/2021 | OK | Jhow |
+| TextArea | Forms | Out/2021 | OK | Jhow |
+| Calendar | Forms | Out/2021 | OK | Jhow |
+| Time | Forms | Out/2021 | OK | Jhow |
+| CheckBox | Forms | Out/2021 | OK | Jhow |
+| Telefone | Forms | Out/2021 | OK | Jhow |
+| EMail | Forms | Out/2021 | OK | Jhow |
+| Link | Forms | Out/2021 | OK | Jhow |
+| Money | Forms | Out/2021 | OK | Jhow |
+| Crud | Crud | Nov/2021 | OK | Jhow |
+ 
+---
+
+## 🙋🏻 **Membros**
+
+- [Luiz Gustavo](https://github.com/luizgustavo77) 
+- [Thiago](https://github.com/thiagofernandes101)
+- [Jhonatan](https://github.com/JhonatanMatos) - criador
+- [Paulo](https://github.com/paulopatrocinio)
+
+---
+
+## 💼 **Agradecimentos**

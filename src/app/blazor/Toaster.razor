@@ -1,0 +1,59 @@
+﻿@page "/toaster"
+
+@inject FTTToastService toastService
+
+@code{
+}
+
+<div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+    <div class="mdl-cell--12-col">
+        <h1>Toaster</h1>
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Exemplo</h4>
+        <h6>Clicando nos botões abaixo a notifição vai abrir, ira sobrepor tudo atras da pagina.</h6>
+    </div>
+
+    <div class="mdl-cell--3-col mdl-grid">
+        <button class="ftt-blazor-button" @onclick="@(() => toastService.ShowToast("Mensagem de INFO", FTTToastEnum.Info))">
+            INFORMAÇÃO
+        </button>
+    </div>
+    <div class="mdl-cell--3-col mdl-grid">
+        <button class="ftt-blazor-button" @onclick="@(() => toastService.ShowToast("Mensagem de SUCESSO", FTTToastEnum.Success))">
+            SUCESSO
+        </button>
+    </div>
+    <div class="mdl-cell--3-col mdl-grid">
+        <button class="ftt-blazor-button" @onclick="@(() => toastService.ShowToast("Mensagem de ALERTA", FTTToastEnum.Warning))">
+            AVISO
+        </button>
+    </div>
+    <div class="mdl-cell--3-col mdl-grid">
+        <button class="ftt-blazor-button" @onclick="@(() => toastService.ShowToast("Mensagem de ERRO", FTTToastEnum.Error))">
+            ERROR
+        </button>
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Usando</h4>
+        <h6>Injeção no statup</h6>
+        <img src="../img/about/toasterUse1.png" />
+        <h6>Injeção na pagina</h6>
+        <img src="../img/about/toasterUse2.png" />
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Codigo usado</h4>
+        <h6>Abaixo uma imagem de como implementar o dialog no seu sistema</h6>
+        <img src="../img/about/toaster.png" />
+    </div>
+
+    <div class="mdl-cell--12-col">
+        <h4>Parametros do <span style="font-weight:bold;">ShowToast</span></h4>
+        <h6><span style="font-weight:bold;">Message:</span> Aqui passamos o texto que sera mostrado ao aparecer o toaster</h6>
+
+        <h6><span style="font-weight:bold;">ToastEnum:</span> Aqui passamos o tipo da notificação</h6>
+    </div>
+</div>
