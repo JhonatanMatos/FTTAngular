@@ -33,22 +33,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 | Componente | Relação | Entrega | Concluido | Responsavel |
 | --- | --- | --- | --- | --- |
-| Dialog | Dialog | Set/2021 | OK | Jhow |
-| Toast | Dialog | Set/2021 | OK | Jhow |
-| Grid Divider | Dialog/2021 | Out | OK | Jhow |
-| Input | Forms | Set/2021 | OK | Jhow |
-| Select | Forms | Set/2021 | OK | Jhow |
-| Number | Forms | Out/2021 | OK | Jhow |
-| Color | Forms | Out/2021 | OK | Jhow |
-| TextArea | Forms | Out/2021 | OK | Jhow |
-| Calendar | Forms | Out/2021 | OK | Jhow |
-| Time | Forms | Out/2021 | OK | Jhow |
-| CheckBox | Forms | Out/2021 | OK | Jhow |
-| Telefone | Forms | Out/2021 | OK | Jhow |
-| EMail | Forms | Out/2021 | OK | Jhow |
-| Link | Forms | Out/2021 | OK | Jhow |
-| Money | Forms | Out/2021 | OK | Jhow |
-| Crud | Crud | Nov/2021 | OK | Jhow |
+| Dialog | Dialog | Set/2021 | ---- | Jhow |
+| Toast | Dialog | Set/2021 | ---- | Jhow |
+| Grid Divider | Dialog | Out/2021 | ---- | Jhow |
+| Input | Forms | Set/2021 | ---- | Jhow |
+| Select | Forms | Set/2021 | ---- | Jhow |
+| Number | Forms | Out/2021 | ---- | Jhow |
+| Color | Forms | Out/2021 | ---- | Jhow |
+| TextArea | Forms | Out/2021 | ---- | Jhow |
+| Calendar | Forms | Out/2021 | ---- | Jhow |
+| Time | Forms | Out/2021 | ---- | Jhow |
+| CheckBox | Forms | Out/2021 | ---- | Jhow |
+| Telefone | Forms | Out/2021 | ---- | Jhow |
+| EMail | Forms | Out/2021 | ---- | Jhow |
+| Link | Forms | Out/2021 | ---- | Jhow |
+| Money | Forms | Out/2021 | ---- | Jhow |
+| Crud | Crud | Nov/2021 | ---- | Jhow |
  
 ---
 
