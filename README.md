@@ -37,9 +37,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 | Toast | Dialog | Set/2021 | OK | Jhow |
 | Grid Divider | Dialog/2021 | Out | OK | Jhow |
 | Input | Forms | Set/2021 | OK | Jhow |
-| Select Type T  | Forms | Set/2021 | OK | Jhow |
-| Select Enum  | Forms | Set/2021 | OK | Jhow |
-| Select Array  | Forms | Set/2021 | OK | Jhow |
+| Select | Forms | Set/2021 | OK | Jhow |
 | Number | Forms | Out/2021 | OK | Jhow |
 | Color | Forms | Out/2021 | OK | Jhow |
 | TextArea | Forms | Out/2021 | OK | Jhow |
