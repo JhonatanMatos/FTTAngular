@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
+import { Router } from '@angular/router';
 import { Post } from '../post';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-index',
@@ -8,16 +11,23 @@ import { Post } from '../post';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  
+  closeResult!: string;
   posts: Post[] = []; 
+  form!: any;
 
-  constructor(public postService: PostService) { }  
+  constructor(public postService: PostService, private modalService: NgbModal, private router: Router) { }  
 
   ngOnInit(): void {
     this.postService.getAll().subscribe((data: Post[])=>{
       this.posts = data;
       console.log(this.posts);
-    })  
+    }),
+    this.form = new FormGroup({
+      title: new FormControl('', [Validators.required]),      
+    });  
+  } 
+  get f(){
+    return this.form.controls;
   } 
 
   deletePost(id: number){
@@ -25,5 +35,31 @@ export class IndexComponent implements OnInit {
          this.posts = this.posts.filter(item => item.id !== id);
          console.log('Post deleted successfully!');
     })
+  }
+
+  open(content: any) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  submit(){
+    console.log(this.form.value);
+    this.postService.create(this.form.value).subscribe(res => {
+         console.log('Post created successfully!');
+         this.router.navigateByUrl('post/index');
+    })
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
   }
 }

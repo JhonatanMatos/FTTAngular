@@ -15,6 +15,8 @@ import { ButtonComponent } from './component/button/button.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { PostModule } from './component/post/post.module';
+import { LinkComponent } from './component/link/link.component';
+import { DividerComponent } from './component/divider/divider.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { PostModule } from './component/post/post.module';
     HomeComponent,
     SelectComponent,
     InputComponent,
-    ButtonComponent,    
+    ButtonComponent,
+    LinkComponent,
+    DividerComponent,    
   ],
   imports: [
     BrowserModule,
