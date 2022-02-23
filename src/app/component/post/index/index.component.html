@@ -33,13 +33,7 @@
     </table>
   </div>
 
-  <ng-template #mymodal let-modal>
-    <!--<div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title"></h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-          <span aria-hidden="true">×</span>
-      </button>
-    </div>-->
+  <ng-template #mymodal let-modal>    
     <div class="modal-body">
       <p> Pokemons</p>
       <form [formGroup]="form" (ngSubmit)="submit()">
@@ -50,9 +44,9 @@
             <div *ngIf="f.title.errors.required">Name is required.</div>
           </div>
         </div>
+        <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
         <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
-      </form>
-      <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
+      </form>      
     </div>
     <div class="modal-footer">
       <!--<button type="button" class="btn btn-success"routerLink="/post/create/" (ngSubmit)="submit()>Ok</button>-->

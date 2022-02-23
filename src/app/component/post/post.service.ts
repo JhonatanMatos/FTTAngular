@@ -9,23 +9,32 @@ import { Post } from './post';
 })
 export class PostService {
 
-  private apiURL = "https://jsonplaceholder.typicode.com";   
+  //private apiURL = "https://jsonplaceholder.typicode.com";   
+  private apiURL = "http://localhost:8080/api/v1/pokemons";   
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      "Access-Control-Allow-Origin": "*"
     })
   }  
 
-  constructor(private httpClient: HttpClient) { }   
+  constructor(private httpClient: HttpClient) { }
 
   getAll(): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(this.apiURL + '/posts/')
-
+    return this.httpClient.get<Post[]>(this.apiURL)
     .pipe(
       catchError(this.errorHandler)
     )
   }   
+
+  //getAll(): Observable<Post[]> {
+  //  return this.httpClient.get<Post[]>(this.apiURL + '/posts/')
+//
+  //  .pipe(
+  //    catchError(this.errorHandler)
+  //  )
+  //}   
 
   create(post: any): Observable<Post> {
     return this.httpClient.post<Post>(this.apiURL, JSON.stringify(post), this.httpOptions)
