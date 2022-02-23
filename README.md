@@ -31,7 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## ☕ **FTTAngular Beta**
 > APIs utilizadas no projeto:
-https://github.com/JhonatanMatos/ApiNode
+- [Pokemon](https://github.com/JhonatanMatos/ApiNode)
 
 
 > Roadmap do desenvolvimento
@@ -61,7 +61,7 @@ https://github.com/JhonatanMatos/ApiNode
 
 - [Luiz Gustavo](https://github.com/luizgustavo77) 
 - [Thiago](https://github.com/thiagofernandes101)
-- [Jhonatan](https://github.com/JhonatanMatos) - criador
+- [Jhonatan](https://github.com/JhonatanMatos) - Criador
 - [Paulo](https://github.com/paulopatrocinio)
 
 ---
