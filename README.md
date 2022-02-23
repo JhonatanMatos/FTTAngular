@@ -28,7 +28,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ---
 
+
 ## ☕ **FTTAngular Beta**
+> APIs utilizadas no projeto:
+https://github.com/JhonatanMatos/ApiNode
+
+
 > Roadmap do desenvolvimento
 
 | Componente | Relação | Entrega | Concluido | Responsavel |
