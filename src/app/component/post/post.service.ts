@@ -9,8 +9,8 @@ import { Post } from './post';
 })
 export class PostService {
 
-  //private apiURL = "https://jsonplaceholder.typicode.com";   
-  private apiURL = "http://localhost:8080/api/v1/pokemons";   
+  //private apiURL = "https://jsonplaceholder.typicode.com/posts/";   
+  private apiURL = "http://localhost:8080/api/v1/pokemons/";   
 
   httpOptions = {
     headers: new HttpHeaders({
