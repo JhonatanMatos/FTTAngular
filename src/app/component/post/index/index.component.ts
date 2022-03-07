@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { Router } from '@angular/router';
 import { Post } from '../post';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-index',
@@ -12,44 +13,48 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class IndexComponent implements OnInit {
   closeResult!: string;
-  posts: Post[] = []; 
+  posts: Post[] = [];
   form!: any;
 
-  constructor(public postService: PostService, private modalService: NgbModal, private router: Router) { }  
+  constructor(public postService: PostService, private modalService: NgbModal, private router: Router) { }
 
   ngOnInit(): void {
-    this.postService.getAll().subscribe((data: Post[])=>{
+    this.postService.getAll().subscribe((data: Post[]) => {
       this.posts = data;
       console.log(this.posts);
     }),
-    this.form = new FormGroup({
-      title: new FormControl('', [Validators.required]),      
-    });  
-  } 
-  get f(){
+      this.form = new FormGroup({
+        title: new FormControl('', [Validators.required]),
+      });
+  }
+  get f() {
     return this.form.controls;
-  } 
+  }
+  refresh(): void {
+    window.location.reload();
+  }
 
-  deletePost(id: number){
+  deletePost(id: number) {
     this.postService.delete(id).subscribe(res => {
-         this.posts = this.posts.filter(item => item.id !== id);
-         console.log('Post deleted successfully!');
+      this.posts = this.posts.filter(item => item.id !== id);
+      console.log('Post deleted successfully!');
     })
   }
 
   open(content: any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
 
-  submit(){
+  submit() {
     console.log(this.form.value);
     this.postService.create(this.form.value).subscribe(res => {
-         console.log('Post created successfully!');         
-         this.router.navigateByUrl('post/index');
+      console.log('Post created successfully!');
+      this.router.navigateByUrl('post/index');
+      this.refresh();
     })
   }
 
@@ -59,7 +64,7 @@ export class IndexComponent implements OnInit {
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
       return 'by clicking on a backdrop';
     } else {
-      return  `with: ${reason}`;
+      return `with: ${reason}`;
     }
   }
 }
