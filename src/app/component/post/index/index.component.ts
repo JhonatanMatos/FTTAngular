@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Post } from '../post';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { NotificationService} from 'src/app/services/notification.service'
 
 
 @Component({
@@ -16,7 +17,7 @@ export class IndexComponent implements OnInit {
   posts: Post[] = [];
   form!: any;
 
-  constructor(public postService: PostService, private modalService: NgbModal, private router: Router) { }
+  constructor(public postService: PostService, private modalService: NgbModal, private router: Router,private notifyService : NotificationService) { }
 
   ngOnInit(): void {
     this.postService.getAll().subscribe((data: Post[]) => {
@@ -53,8 +54,10 @@ export class IndexComponent implements OnInit {
     console.log(this.form.value);
     this.postService.create(this.form.value).subscribe(res => {
       console.log('Post created successfully!');
+      this.notifyService.showSuccess("Post created successfully", "")
       this.router.navigateByUrl('post/index');
       this.refresh();
+      
     })
   }
 
