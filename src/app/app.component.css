@@ -1,33 +1,38 @@
 .col-6 {
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid;
-    text-align: center;
-  }
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid;
+  text-align: center;
+}
 
-.titulo{
-    text-align: center;
-    border-bottom: 1px solid;
+.titulo {
+  text-align: center;
+  border-bottom: 1px solid;
 }
-.texto{
-    text-align: justify;
-    border: 1px solid;
-    
-    word-break: break-word;
+
+.texto {
+  text-align: justify;
+  border: 1px solid;
+
+  word-break: break-word;
 }
+
 /*align="left" - Colocar no HTML*/
 /*npm i bootstrap-icons*/
-.logo{
-    /*align-items: flex-start;
+.logo {
+  /*align-items: flex-start;
     width: 200px;  
     margin-right: auto;
     border: 1px solid;
     text-align: center;*/
-    position: static; 
-	left: 90px; /* posiciona a 90px para a esquerda */ 
-	top: 70px; /* posiciona a 70px para baixo */
+  position: static;
+  left: 90px;
+  /* posiciona a 90px para a esquerda */
+  top: 70px;
+  /* posiciona a 70px para baixo */
 }
+
 /*<div style="margin-left:25%;padding:1px 16px;height:1000px;">*/
 
 
@@ -39,94 +44,82 @@
   font-size: 18px;
   margin-right: auto;
 }
+
 .toast-info {
-    color: white;
-    background-color: blue;    
+  color: white;
+  background-color: blue;
 }
+
 .toast-sucesso {
-    color: white;
-    background-color: green;    
+  color: white;
+  background-color: green;
 }
+
 .toast-aviso {
-    color: white;
-    background-color: yellow;    
+  color: white;
+  background-color: yellow;
 }
+
 .toast-erro {
-    color: white;
-    background-color: red;    
+  color: white;
+  background-color: red;
 }
+
 body {
-    margin: 0;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    background-color: blue;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    
-  }
-  
-  li.menu {
-    border: 1px solid white;  
-  }
-  
-  img.logo {
-      display: block;
-      margin-left: auto;
-      margin-right: auto 
-  }
-  
-  img.ftt {  
-    border: 1px solid #ccc;    
-    display: block;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: auto;
-  }
-  img.ftt:hover {
-    border: 1px solid #777;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    text-align: center;  
-  }
-  
-  li a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: white;
-    color: blue;
-    text-decoration: underline;
-  }
-  img.logo {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      
-  }
-  /*div.texto{
-    height: 10em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    border-style: groove;
-    border:solid 1px;
-    box-shadow:  black;
-  }
-  
-  */
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: blue;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+
+}
+
+li.menu {
+  border: 1px solid white;
+}
+
+img.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+img.ftt {
+  border: 1px solid #ccc;
+  display: block;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+
+img.ftt:hover {
+  border: 1px solid #777;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color: blue;
+  text-decoration: underline;
+}

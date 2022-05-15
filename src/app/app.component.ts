@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { NotificationService } from './services/notification.service';
 
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 
 
