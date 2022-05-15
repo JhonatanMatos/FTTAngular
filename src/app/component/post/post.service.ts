@@ -10,12 +10,12 @@ import { Post } from './post';
 export class PostService {
 
   //private apiURL = "https://jsonplaceholder.typicode.com/posts/";   
-  private apiURL = "http://localhost:8080/api/v1/pokemons/";   
+  private apiURL = "http://localhost:8080/api/v1/pokemons/";    
 
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      "Access-Control-Allow-Origin": "*"
+      "Access-Control-Allow-Origin": this.apiURL
     })
   }  
 
