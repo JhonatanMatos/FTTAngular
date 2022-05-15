@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  styleUrls: []
 })
 export class EditComponent implements OnInit {
   id!: number;
@@ -28,7 +28,6 @@ export class EditComponent implements OnInit {
 
     this.form = new FormGroup({
       title: new FormControl('', [Validators.required]),
-      //body: new FormControl('', Validators.required)
     });
   }
 
@@ -38,7 +37,7 @@ export class EditComponent implements OnInit {
 
   submit() {
     console.log(this.form.value);
-    this.postService.update(this.id, this.form.value).subscribe(res => {
+    this.postService.update(this.id, this.form.value).subscribe(() => {
       console.log('Post updated successfully!');
       this.router.navigateByUrl('post/index');
     })

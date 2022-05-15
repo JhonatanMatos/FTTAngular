@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Post } from '../post';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { NotificationService} from 'src/app/services/notification.service'
+import { NotificationService } from 'src/app/services/notification.service'
 
 
 @Component({
@@ -17,16 +17,16 @@ export class IndexComponent implements OnInit {
   posts: Post[] = [];
   form!: any;
 
-  constructor(public postService: PostService, private modalService: NgbModal, private router: Router,private notifyService : NotificationService) { }
+  constructor(public postService: PostService, private modalService: NgbModal, private router: Router, private notifyService: NotificationService) { }
 
   ngOnInit(): void {
     this.postService.getAll().subscribe((data: Post[]) => {
       this.posts = data;
       console.log(this.posts);
-    }),
-      this.form = new FormGroup({
-        title: new FormControl('', [Validators.required]),
-      });
+    })
+    this.form = new FormGroup({
+      title: new FormControl('', [Validators.required]),
+    });
   }
   get f() {
     return this.form.controls;
@@ -36,7 +36,7 @@ export class IndexComponent implements OnInit {
   }
 
   deletePost(id: number) {
-    this.postService.delete(id).subscribe(res => {
+    this.postService.delete(id).subscribe(() => {
       this.posts = this.posts.filter(item => item.id !== id);
       console.log('Post deleted successfully!');
     })
@@ -52,12 +52,10 @@ export class IndexComponent implements OnInit {
 
   submit() {
     console.log(this.form.value);
-    this.postService.create(this.form.value).subscribe(res => {
+    this.postService.create(this.form.value).subscribe(() => {
       console.log('Post created successfully!');
       this.notifyService.showSuccess("Post created successfully", "")
-      this.router.navigateByUrl('post/index');      
-      //this.refresh();
-      
+      this.router.navigateByUrl('post/index');
     })
   }
 

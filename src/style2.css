@@ -55,21 +55,3 @@ li a:hover:not(.active) {
   color: blue;
   text-decoration: underline;
 }
-img.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-/*div.texto{
-  height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  border-style: groove;
-  border:solid 1px;
-  box-shadow:  black;
-}
-
-*/

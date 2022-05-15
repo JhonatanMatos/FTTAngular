@@ -6,7 +6,7 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  styleUrls: []
 })
 export class CreateComponent implements OnInit {
   
@@ -29,7 +29,7 @@ export class CreateComponent implements OnInit {
 
   submit(){
     console.log(this.form.value);
-    this.postService.create(this.form.value).subscribe(res => {
+    this.postService.create(this.form.value).subscribe(() => {
          console.log('Post created successfully!');
          this.router.navigateByUrl('post/index');
     })

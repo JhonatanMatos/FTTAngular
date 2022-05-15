@@ -4,7 +4,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-link',
   templateUrl: './link.component.html',
-  styleUrls: ['./link.component.css']
+  styleUrls: []
 })
 export class LinkComponent{
   closeResult!: string;

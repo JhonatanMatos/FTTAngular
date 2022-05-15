@@ -46,41 +46,35 @@
 
         <p>Link para Pokemon</p>
         <a class="link-info" style="color:blue" (click)="open(mymodal)"> <u>Squardle</u></a><br>
-        <!--<a class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Abrir dialog</a>-->
     </div>
     <div class="mdl-cell--12-col">
         <h4>Usando</h4>
-        <h6>Variavel booleana que quando <strong>true</strong> abre o dialog e quando <strong>false</strong> fecha o modal</h6>
+        <h6>Variavel booleana que quando <strong>true</strong> abre o dialog e quando <strong>false</strong> fecha o
+            modal</h6>
         <img src="../../../assets/img/about/dialogUse.png" alt="exemplos" />
     </div>
 
     <div class="mdl-cell--12-col">
         <h4>Codigo usado</h4>
         <h6>Abaixo uma imagem de como implementar o dialog no seu sistema</h6>
-        <img src="../../../assets/img/about/dialog.png" alt="exemplos"/>
+        <img src="../../../assets/img/about/dialog.png" alt="exemplos" />
     </div>
 
     <div class="mdl-cell--12-col">
         <h4>Parametro <span style="font-weight:bold;">bind-IsOpen</span></h4>
         <h6>Aqui criamos a variavel que passamos como parametro para abrir o dialog</h6>
-        <img src="../../../assets/img/about/dialogCode.png" alt="exemplos"/>
+        <img src="../../../assets/img/about/dialogCode.png" alt="exemplos" />
     </div>
 </div>
 
 <ng-template #mymodal let-modal>
     <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Link para pokemon</h4>
-        <!--<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">×</span>
-        </button>-->
     </div>
     <div class="modal-body">
         <h1>LinkPage</h1>
         <p> Essa é a pagian aberta ao clicar no link!</p>
         <p>Nome Pokemon: Squardle</p>
     </div>
-    <div class="modal-footer">
-        <!--<button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Cancel</button>
-        <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Ok</button>-->
-    </div>
+    <div class="modal-footer"></div>
 </ng-template>

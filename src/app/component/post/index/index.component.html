@@ -9,18 +9,17 @@
   </div>
 
   <div style="height: 30rem;">
-    <!--<a href="#" routerLink="/post/create/" class="btn btn-success">Create New Pokemon</a>-->
     <br>
     <a class="btn btn-success" (click)="open(mymodal)"> Create New Pokemon</a>
     <a class="btn btn-success" (click)="refresh()"> Refresh</a><br>
     <br>
     <br>
-    <table class="table table-bordered" >
+    <table class="table table-bordered">
       <caption>Pokemon CRUD</caption>
       <tr>
         <th>ID</th>
         <th>Title</th>
-        <th width="220px">Action</th>
+        <th>Action</th>
       </tr>
 
       <tr *ngFor="let post of posts">
@@ -35,7 +34,7 @@
     </table>
   </div>
 
-  <ng-template #mymodal let-modal>    
+  <ng-template #mymodal let-modal>
     <div class="modal-body">
       <p> Pokemons</p>
       <form [formGroup]="form" (ngSubmit)="submit()" href="#">
@@ -48,9 +47,8 @@
         </div>
         <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
         <button class="btn btn-primary" type="submit" [disabled]="!form.valid " (click)="modal.close()">Submit</button>
-      </form>      
+      </form>
     </div>
     <div class="modal-footer">
-      <!--<button type="button" class="btn btn-success"routerLink="/post/create/" (ngSubmit)="submit()>Ok</button>-->
     </div>
   </ng-template>
