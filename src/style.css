@@ -64,10 +64,6 @@ body {
     height: 100%;
 }
 
-hi{
-    text-align: center;
-}
-
 h1 h4 {
     color: var(--brandone);
     font-weight: bold;
@@ -237,13 +233,7 @@ p {
  * not float around outside their container in IE10/11.
  * Using a browserhacks.com solution for now.
  */
-_:-ms-input-placeholder, :root .graphs {
-    min-height: 664px;
-}
 
-_:-ms-input-placeholder, :root .graph {
-    max-height: 300px;
-}
 /* TODO end */
 .graph:nth-child(1) {
     color: #00b9d8;
