@@ -55,8 +55,8 @@ export class IndexComponent implements OnInit {
     this.postService.create(this.form.value).subscribe(res => {
       console.log('Post created successfully!');
       this.notifyService.showSuccess("Post created successfully", "")
-      this.router.navigateByUrl('post/index');
-      this.refresh();
+      this.router.navigateByUrl('post/index');      
+      //this.refresh();
       
     })
   }
